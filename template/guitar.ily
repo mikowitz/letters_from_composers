@@ -1,5 +1,5 @@
-\include "guitar/voice-one.ily"
-\include "guitar/voice-two.ily"
+\include "guitar/guitar-voice-one.ily"
+\include "guitar/guitar-voice-two.ily"
 
 guitar = {
   << {

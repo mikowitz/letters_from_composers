@@ -1,6 +1,7 @@
 \version "2.22.0"
 \language "english"
 
+\include "../definitions.ily"
 \include "time-sigs.ily"
 \include "voice.ily"
 \include "lyrics.ily"
