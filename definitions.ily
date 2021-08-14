@@ -28,3 +28,12 @@ sempreFF = #(make-dynamic-script
               #:normal-text
              #:italic "sempre"
               #:dynamic "ff"))
+
+piuF = #(make-dynamic-script 
+         (markup #:normal-text #:italic "più" #:dynamic "f"))
+
+piuP = #(make-dynamic-script 
+         (markup #:normal-text #:italic "più" #:dynamic "p"))
+
+pocoSfz = #(make-dynamic-script
+            (markup #:normal-text #:italic "poco" #:dynamic "sfz" ))
