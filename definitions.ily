@@ -13,6 +13,7 @@ guitarMusic = {
 hideTieEnd = {
   \once\omit Accidental
   \once\hide NoteHead
+  \once\hide Stem
   \once\override NoteHead.no-ledgers = ##t
 }
 
