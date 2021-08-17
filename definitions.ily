@@ -38,3 +38,6 @@ piuP = #(make-dynamic-script
 
 pocoSfz = #(make-dynamic-script
             (markup #:normal-text #:italic "poco" #:dynamic "sfz" ))
+
+
+sffz = #(make-dynamic-script (markup #:dynamic "sffz"))
