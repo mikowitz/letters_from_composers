@@ -41,3 +41,9 @@ pocoSfz = #(make-dynamic-script
 
 
 sffz = #(make-dynamic-script (markup #:dynamic "sffz"))
+
+subP = #(make-dynamic-script
+         (markup #:normal-text #:italic "sub." #:dynamic "p"))
+
+subPp = #(make-dynamic-script
+         (markup #:normal-text #:italic "sub." #:dynamic "pp"))
