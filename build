@@ -1,0 +1,11 @@
+#!/usr/bin/env elixir
+
+File.mkdir("scores")
+
+~w(Chopin Mozart Schubert Bach Debussy Puccini Schumann)
+|> Enum.with_index(1)
+|> Enum.each(fn {name, i} ->
+  System.cmd("lilypond", ["-dno-point-and-click", "-o", "./scores/#{i}-#{name}", "#{name}/score.ly"])
+end)
+
+:os.cmd('pdftk scores/*.pdf output letters.pdf')

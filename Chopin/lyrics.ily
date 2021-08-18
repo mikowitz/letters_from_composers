@@ -9,11 +9,17 @@ voiceLyrics = \lyricmode {
   shaped like a great cof -- fin, __ _ has a vast and dust -- y arched ceil -- ing, __ _
   and a lit -- tle win -- dow look -- ing to the gar -- den __ _ with its or -- ange -- trees, __ _ palms and cy -- press -- es. __ _
   Op -- po -- site the win -- dow, __ _ be -- low a ros -- ette in the lac -- y  Moor -- ish style, is a camp -- bed. __ _
-  Be -- side the bed is an old un -- touch -- a -- ble, __ _ 
+  Be -- side the bed is an old 
+  \override LyricText.font-name = #"Bulmer MT Std Display, Italic"
+  un -- touch -- a -- ble, __ _  
+  \override LyricText.font-name = #"Bulmer MT Std Display"
   a kind of square desk, __ _ on which stands a wax can -- dle... __ _
   on the same desk, Bach,
   my scrib -- bles, and oth -- er pa -- pers, not mine...
-  "(...and" the or -- ange -- trees, __ _ palms and cy -- press -- es... __ _)
+  \once \override LyricText.extra-offset = #'(-1 . 0)
+  "(...and" the or -- ange -- trees, __ _ palms and cy -- press -- 
+  \once \override LyricExtender.minimum-length = #6
+  es... __ _)
   Si -- lence...
   If you shout...
   si -- lence a -- gain... __ _

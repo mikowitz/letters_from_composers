@@ -12,7 +12,12 @@
   
   title = "Frédéric Chopin"
   subtitle = "(to a friend)"
-  opus = "Palma, 28 December 1838"
+  opus = \markup {
+    \column {
+      \vspace #1
+      "Palma, 28 December 1838"
+    }
+  }
 }
 
 \score {
