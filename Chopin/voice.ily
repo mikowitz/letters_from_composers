@@ -30,12 +30,15 @@ voice = \relative c'' {
   d^\markIt "decresc." c bf ef ~ ef8. df16 c?8 bf16 a | %24
   g4\mp c8 g ~ | %25
   g\) r r g16\p\( g g8 gs\) \breathe b4 | %26
-  r8 d8\( \tuplet 3/2 { g, a8. bf16} d8 g \showBracket \tuplet 3/2 { f d8. ef16 } | %27
+  r8
+  \shape #'(((0 . 0) (0 . 0) (0 . 0) (0 . 0))
+            ((0 . 2) (0 . 1.5) (.5 . 1) (0 . 1))) PhrasingSlur
+  d8\( \tuplet 3/2 { g, a8. bf16} d8 g \showBracket \tuplet 3/2 { f d8. ef16 } | %27
   af,2\)\> | %28
   R1\! | %29
   r2 
   \tuplet 3/2 { r8 c\(\pp
-                \tweak extra-offset #'(3 . -2)
+                \tweak extra-offset #'(2.5 . -2)
                 ^\markIt "sognando" b } \showBracket \tuplet 5/4 { e16 d b8. ~ } | %30
   16 c8 b16 \showBracket \tuplet 5/4 { e d b8. ~ } b4\) r4 | %31
   \bar "||"

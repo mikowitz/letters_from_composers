@@ -60,7 +60,9 @@ _\markIt "sotto voce"
   as b as!2 | %19
   \once\set fingeringOrientations = #'(right)
   <bf, ef g!-0>4
-  \arpeggio\mp_\markIt "sonoroso" 4 4 4 | %20
+  \arpeggio\mp
+  \tweak extra-offset #'(3 . 2)
+  _\markIt "sonoroso" 4 4 4 | %20
   4 <bf ef af>4_\markIt "pochino cresc." 4 4 | %21
   4 <e, b'! e! g>4 4 4\mf | %22
   4 4 <e c'! e g>4 4 | %23
