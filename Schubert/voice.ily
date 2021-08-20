@@ -25,14 +25,17 @@ voice = \relative c'' {
   d4. ~ 4 a8 | %39
   4. r | %40
   \bar "||"
-  r4. r8  d,\p( e | %41
-  f! a gs16 fs f\( a gs! fs\) f\( fs\) | %42
-  f!\( a gs fs^\markup {\italic "cresc." } f fs f a gs! fs f fs | %43
-  f!8-- e\))\f r r4 a'8\piuF( ~ | %44
+  r4. r8  d,\p\( e | %41
+  f! a gs16 fs f( a gs! fs) f( fs) | %42
+  f!( a gs fs^\markup {\italic "cresc." } f fs f a gs! fs f fs | %43
+  \break
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #2
+  f!8-- e)\)\f r r4 a'8\piuF( ~ | %44
   a e fs ~ 4 ds8 ~ | %45
   8. cs ~ 8 e8. c16 | %46
   c8 cs4 ~ 4.) | %47
-  r4. r4 <a, \parenthesize a'>8( | % 48
+  r4. r4 <\parenthesize a,  a'>8( | % 48
   c! e a bf e, c | %49
   c' cs8. c16 ~ 4) cs,8( | %50
   8 e8. c16 16 d cs4 ~ | %51
@@ -43,23 +46,25 @@ voice = \relative c'' {
   f'!2.)\ff\< ~ | %56
   2.\! | %57
   \bar "||"
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #2.5
   r4. r8 f,\f g | %58
   a4.( ~ 8 bf) a | %59
   a4. ~ 8 r a | %60
   d4. ~ 4 a8 | %61
   4. r | %62
   \bar "||"
-  r4. r8  d,\p( e | %63
-  f! a gs16 fs f\( a gs! fs\) f\( fs\) | %64
-  f!\( a gs fs f fs^\markup {\italic "dimin." } f a gs! fs f fs | %65
-  f!2.\)\pp\> ~ | %66
-  2.)\! | %67
+  r4. r8  d,\p\( e | %63
+  f! a gs16 fs f_( a gs! fs) f_( fs) | %64
+  f!_( a gs fs f fs^\markup {\italic "dimin." } f a gs! fs f fs | %65
+  f!2.)\pp\> ~ | %66
+  2.\)\! | %67
   R2. * 2 | %68-69
   r4. r8. e\pp( | %70
   c e g c | %71
-  e4) r8 f8.(\piuP ef ~ | %72
+  e4) r8 f8.\(\piuP ef ~ | %72
   ef d ef, e ~ | %73
   2. ~ | %74
-  2.) | %75
+  2.\) | %75
   R2.\fermata | %76
 }

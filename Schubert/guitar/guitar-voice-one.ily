@@ -10,11 +10,13 @@ guitairVoiceOne = \relative c' {
   d df ef gf f g! | %7
   \voiceOne
   af-> gf f af-> gf f | %8
+  \break
   b!2.-^\sfz ~ | %9
   b2.\fermata\laissezVibrer^\markup { \italic "(let die away)" } | %10
   \oneVoice b'4 fs gs | %11
   \voiceOne f!2. | %12
   r4 e8 d! b! bf | %13
+  \break
   cs4 af16 g bf4 f8 ~ | %14
   f \afterGrace g4 { \once\stemDown g8\glissando } \tieNeutral e,4.-^\sfz ~ | %15
   e4. ~ 4 ds8\p | %16
@@ -40,6 +42,8 @@ guitairVoiceOne = \relative c' {
   <gs, d' a'>4->\f 8\> 4 8 | %33
   <d' a'>4\p 8 4 8 | %34
   4 8 4 8 | %35
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #4
   f'16 a f e d e f a f e d e | %36
   f16 a f e d e f a f e d e | %37
   f16 a f e d e f a f e d e | %38
