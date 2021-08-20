@@ -32,6 +32,7 @@
         instrumentName = "Guitar"
         \consists "Span_arpeggio_engraver"
         \consists "Merge_rests_engraver"
+        \consists "Mark_engraver"
       } <<
         \set Staff.connectArpeggios = ##t
         \timeSigs \guitar

@@ -35,7 +35,7 @@
     \override DynamicText.font-size = #1.5
     \override TimeSignature.font-name = #"Liberation Serif, Bold"
     \override TimeSignature.font-size = #3
-    %\override Hairpin.to-barline = ##f
+    \override Hairpin.to-barline = ##f
     \override BreathingSign.text =
       \markup { \raise #1.25 \fontsize #7 "," }
   }
@@ -117,8 +117,9 @@ showBracket = { \once\override TupletBracket.bracket-visibility = ##t }
 
 sempreFF = #(make-dynamic-script
              (markup
-              #:normal-text
-             #:italic "sempre"
+               #:override '(font-name . "Liberation Serif, Italic")
+           #:override '((font-size . 0))
+           "sempre"
               #:dynamic "ff"))
 
 piuF = #(make-dynamic-script 

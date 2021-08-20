@@ -38,7 +38,10 @@ timeSigs = {
   \time #'(3 3 4) 10/8
   s8 * 10 | %16
   \bar "||"
+  \tweak extra-offset #'(0 . -2)
+  \mark \markup { \fontsize #-3 \musicglyph #"scripts.ufermata" }
   \time #'(2 2 2 4) 10/8
+  \tweak extra-offset #'(1.5 . 0)
   \tempo "Molto menu mosso"
   s8 * 10 | %17
   \time #'(2 2 2 2 4) 12/8
@@ -46,6 +49,7 @@ timeSigs = {
   \bar "||"
   \undo\omit Staff.TimeSignature
   \time 4/4
+  \beamByQuarters
   \tempo "Deliberato"
   s1 * 3 | %19-21
   \bar "||"
@@ -63,6 +67,7 @@ timeSigs = {
   \tempo "Deliberato"
   s1 * 4 | %26-29
   \bar "||"
+  \tempo "Come prima"
   \time #'(4 2 2 2 2 2 5) 19/8
   s8 * 19 | %30
   \time #'(4 4 4) 12/8
