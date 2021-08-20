@@ -38,6 +38,8 @@
     \override Hairpin.to-barline = ##f
     \override BreathingSign.text =
       \markup { \raise #1.25 \fontsize #7 "," }
+    \override StrokeFinger.font-name = #"Liberation Serif, Bold Italic"
+    \override StrokeFinger.font-size = #-1
   }
 
   \context {
@@ -98,6 +100,8 @@ shiftFingering = #(define-music-function (direction music) (number? ly:music?)
                       $music
                     #}))
 
+
+#(define RH rightHandFinger)
 
 hideTieEnd = {
   \once\omit Accidental
