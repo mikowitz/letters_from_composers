@@ -1,5 +1,7 @@
 #(set-global-staff-size 17)
 
+\include "arrows.ily"
+
 \paper {
   #(set-paper-size "arch a")
   top-margin = 25\mm
@@ -7,7 +9,6 @@
   left-margin = 25\mm
   right-margin = 25\mm
   system-system-spacing.minimum-distance = 20\mm
-  
   markup-system-spacing.minimum-distance = 16\mm
   %ragged-last-bottom = ##f
   #(define fonts
@@ -18,7 +19,6 @@
       #:typewriter "Liberation Mono"
       #:factor (/ staff-height pt 20)
   ))
-
   
 }
   
@@ -50,6 +50,11 @@
     \override LyricHyphen.minimum-distance = #2.0
   }
 
+  \context {
+    \StaffGroup
+    \override SystemStartBracket.collapse-height = #0
+  }
+
 }
 
 vocalMusic = {
@@ -74,12 +79,12 @@ guitarMusic = {
 stringNumberSpanner =
   #(define-music-function (parser location StringNumber) (string?)
     #{
-      \override TextSpanner.style = #'solid
-      \override TextSpanner.font-size = #-5
-      \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-      \override TextSpanner.bound-details.left.text =
+      \once\override TextSpanner.style = #'solid
+      \once\override TextSpanner.font-size = #-5
+      \once\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+      \once\override TextSpanner.bound-details.left.text =
         \markup { \circle \number $StringNumber \hspace #.667 }
-       \override TextSpanner.bound-details.right.text = 
+       \once\override TextSpanner.bound-details.right.text = 
        \markup { \draw-line #'(0 . -1) }
     #})
 
@@ -107,6 +112,7 @@ hideTieEnd = {
   \once\omit Accidental
   \once\hide NoteHead
   \once\hide Stem
+  \once\hide Dots
   \once\override NoteHead.no-ledgers = ##t
 }
 
@@ -127,7 +133,10 @@ sempreFF = #(make-dynamic-script
               #:dynamic "ff"))
 
 piuF = #(make-dynamic-script 
-         (markup #:normal-text #:italic "più" #:dynamic "f"))
+         (markup 
+           #:override '(font-name . "Liberation Serif, Italic")
+           #:override '((font-size . 0))
+           "più" #:dynamic "f"))
 
 piuP = 
   \tweak DynamicText.self-alignment-X #RIGHT
@@ -139,7 +148,10 @@ piuP =
            #:dynamic "p"))
 
 pocoSfz = #(make-dynamic-script
-            (markup #:normal-text #:italic "poco" #:dynamic "sfz" ))
+            (markup 
+              #:override '(font-name . "Liberation Serif, Italic")
+           #:override '((font-size . 0))
+             "poco" #:dynamic "sfz" ))
 
 
 sffz = #(make-dynamic-script (markup #:dynamic "sffz"))
