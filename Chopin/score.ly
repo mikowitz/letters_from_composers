@@ -22,7 +22,9 @@
 
 \score {
   <<
-    \new StaffGroup = "StaffGroup_Voice" <<
+    \new StaffGroup = "StaffGroup_Voice" \with {
+      \override StaffGrouper.staffgroup-staff-spacing.basic-distance = #14
+    } <<
       \new Staff = "Staff_Voice" \with {
         instrumentName = "Voice"
       } {
